@@ -63,6 +63,8 @@
 					<ul class="product-properties">
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
+						<li><span class="propert-name">AgeRestriction:</span><span class="product_age_restriction"></span></li>
+						<li><span class="propert-name">Genre:</span><span class="product_genre"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
@@ -125,6 +127,8 @@
               const clone = template.content.cloneNode(true);
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
+			  clone.querySelector(".product_age_restriction").textContent = product.AgeRestriction
+			  clone.querySelector(".product_genre").textContent = product.Genre
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = product.code
               clone.querySelector(".product_id").value = product.id

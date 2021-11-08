@@ -5,7 +5,7 @@
 DROP TABLE IF EXISTS products; 
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  code VARCHAR(15),
+  Code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),

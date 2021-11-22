@@ -14,6 +14,8 @@ CREATE TABLE products (
 );
 
 
+
+
 --
 -- populate with data
 --
@@ -48,3 +50,11 @@ insert into products (name, description, code, price) values ('Velvet Goldmine',
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
 
+DROP TABLE IF EXISTS genres; 
+CREATE TABLE genres (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255),
+  description TEXT
+);
+
+insert into genres (name, description) values ('action', 'boom boom pow pow');

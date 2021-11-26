@@ -61,7 +61,7 @@
 				<div class="card-body">
 					<p class="product_description card-text"></p>
 					<ul class="product-properties">
-						<li><span class="propert-name">Recommended minimum age:</span><span class="product_age_restriction"></span></li>
+						<li><span class="propert-name">Recommended minimum age:</span><span class="recommended_minimum_age"></span></li>
 						<li><span class="propert-name">Genres:</span><span class="product_genre"></span></li>
 						<li><span class="propert-name">Rating:</span><span class="product_rating"></span></li>
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
@@ -119,6 +119,7 @@
             var data = JSON.parse(this.response) // vertaal response van API naar array met producten
             for (let row in data) { // herhaal voor elke product
               const product = data[row]
+			  const product_genres = data[row]
               var name = product.name.substr(0, 35)
               if(name.length < product.name.length) {
                 name = name + '...'
@@ -128,8 +129,9 @@
               const clone = template.content.cloneNode(true);
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
-			  clone.querySelector(".product_age_restriction").textContent = ` ${product.age_restriction}`
-			  clone.querySelector(".product_genre").textContent = ` ${product.genre}`
+			  clone.querySelector(".recommended_minimum_age").textContent = ` ${product.recommended_minimum_age_id}`
+			  clone.querySelector(".product_genre").textContent = ` ${product_genres.id}`
+			  clone.querySelector(".product_rating").textContent = ` ${product.rating_id}`
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = ` ${product.code}`
               clone.querySelector(".product_id").value = product.id

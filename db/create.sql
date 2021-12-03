@@ -50,8 +50,8 @@ CREATE TABLE ratings (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('French Film', 'franse film bruh', 3, 5, '816905633-0', 10.5);
-insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('Post Mortem', 'na de dood', 7, 6, '077030122-3', 11);
+insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('film 1', '.....', 3, 5, '816905633-0', 10.5);
+insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
 insert into products (name, description, code, price) values ('Scarlet and the Black, The', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

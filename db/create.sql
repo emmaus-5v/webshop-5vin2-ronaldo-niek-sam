@@ -9,8 +9,8 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  recommended_minimum_age_id NUMERIC(10, 2),
-  rating_id NUMERIC(10, 2)
+  recommended_minimum_age_id INTEGER,
+  rating_id INTEGER
 );
 
 DROP TABLE IF EXISTS genres; 
@@ -23,8 +23,8 @@ CREATE TABLE genres (
 DROP TABLE IF EXISTS product_genres;
 CREATE TABLE product_genres (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  product_id NUMERIC(10, 2),
-  genre_id NUMERIC(10, 2)
+  product_id INTEGER,
+  genre_id INTEGER
 );
 
 DROP TABLE IF EXISTS recommended_minimum_ages; 
@@ -50,7 +50,8 @@ CREATE TABLE ratings (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 3, 5, '816905633-0', 10.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 
+5, '816905633-0', 10.5);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 3', '...', 4, 8, '445924201-X', 13.5);
 insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
@@ -92,7 +93,7 @@ insert into ratings (rating) values ('-1/10 penguins');
 insert into ratings (rating) values ('-2/10 penguins');
 insert into ratings (rating) values ('-3/10 penguins');
 
-/* #1 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('AL');
+/* #1 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('ALL');
 /* #2 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('6');
 /* #3 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('9');
 /* #4 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('12');

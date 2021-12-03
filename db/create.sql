@@ -68,9 +68,9 @@ Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 
 /* #2 */ insert into genres (name, description) values ('comedy', 'ksu ksu ksu');
 /* #3 */ insert into genres (name, description) values ('documentary', 'David Attenborough');
 /* #4 */ insert into genres (name, description) values ('animated movie', 'disney etc.');
-/* #5 */ insert into genres (name, description) values ('romance', 'awww');
+/* #5 */ insert into genres (name, description) values ('romance', 'smooch');
 /* #6 */ insert into genres (name, description) values ('sci-fi', 'pog genre');
-/* #7 */ insert into genres (name, description) values ('horror', 'aaaahhhhh');
+/* #7 */ insert into genres (name, description) values ('horror', 'aaaagggggghhhhh');
 /* #8 */ insert into genres (name, description) values ('drama', " :'( ");
 /* #9 */ insert into genres (name, description) values ('adventure', 'monster, treasure, evil organisation that wants treasure, more treasure');
 /* #10 */ insert into genres (name, description) values ('fantasy', 'skidadle dkidoodle, your...');

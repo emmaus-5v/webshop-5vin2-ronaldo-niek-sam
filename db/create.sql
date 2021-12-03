@@ -50,13 +50,9 @@ CREATE TABLE ratings (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('film 1', '.....', 3, 5, '816905633-0', 10.5);
-insert into products (name, description, recommended_minimum_age_id,rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
-insert into products (name, description, code, price) values ('Scarlet and the Black, The', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '445924201-X', 13.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 3, 5, '816905633-0', 10.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 3', '...', 4, 8, '445924201-X', 13.5);
 insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
 In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
@@ -96,12 +92,13 @@ insert into ratings (rating) values ('-1/10 penguins');
 insert into ratings (rating) values ('-2/10 penguins');
 insert into ratings (rating) values ('-3/10 penguins');
 
-/* #1 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('ALL');
-/* #2 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('9');
-/* #3 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('13');
-/* #4 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('16');
-/* #5 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('18');
-/* #6 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('21');
+/* #1 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('AL');
+/* #2 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('6');
+/* #3 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('9');
+/* #4 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('12');
+/* #5 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('14');
+/* #6 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('16');
+/* #7 */ insert into recommended_minimum_ages (recommended_minimum_age) values ('18');
 
 insert into product_genres (product_id, genre_id) values (1, 3);
 insert into product_genres (product_id, genre_id) values (1, 11);

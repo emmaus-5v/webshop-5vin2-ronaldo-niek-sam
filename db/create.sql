@@ -70,7 +70,7 @@ Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 
 /* #3 */ insert into genres (name, description) values ('documentary', 'David Attenborough');
 /* #4 */ insert into genres (name, description) values ('animated movie', 'disney etc.');
 /* #5 */ insert into genres (name, description) values ('romance', 'smooch');
-/* #6 */ insert into genres (name, description) values ('sci-fi', 'pog genre');
+/* #6 */ insert into genres (name, description) values ('sci-fi', 'poep genre');
 /* #7 */ insert into genres (name, description) values ('horror', 'aaaagggggghhhhh');
 /* #8 */ insert into genres (name, description) values ('drama', " :'( ");
 /* #9 */ insert into genres (name, description) values ('adventure', 'monster, treasure, evil organisation that wants treasure, more treasure');

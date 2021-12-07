@@ -50,8 +50,7 @@ CREATE TABLE ratings (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 
-5, '816905633-0', 10.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 5, '816905633-0', 10.5);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 3', '...', 4, 8, '445924201-X', 13.5);
 insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.

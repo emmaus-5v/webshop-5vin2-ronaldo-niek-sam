@@ -50,18 +50,12 @@ CREATE TABLE ratings (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 5, '816905633-0', 10.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 1', '...', 1, 9, '816905633-0', 10.5);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 2', '...', 7, 6, '077030122-3', 11);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 3', '...', 4, 8, '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Velvet Goldmine', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 4', '...', 6, 12, '693155505-7', 13.5);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 5', '...', 2, 2, '686928463-6', 14);
+insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 6', '...', 5, 10, '492662523-7', 14);
 
 
 /* #1 */ insert into genres (name, description) values ('action', 'boom boom pow pow'); 

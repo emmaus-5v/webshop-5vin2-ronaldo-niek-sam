@@ -74,8 +74,8 @@ function getProducts(request, response) {
     data = sqlOpdracht.all(category_id)
   } else {
     const sqlOpdracht = db.prepare(`SELECT * FROM products
-                                    JOIN ratings ON products.rating_id = ratings.id
                                     JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = recommended_minimum_ages.id
+                                    JOIN ratings ON products.rating_id = ratings.id                                  
                                     ORDER BY id ASC`)
     data = sqlOpdracht.all()
   }

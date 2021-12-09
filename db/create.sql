@@ -16,7 +16,7 @@ CREATE TABLE products (
 DROP TABLE IF EXISTS genres; 
 CREATE TABLE genres (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(255),
+  genre VARCHAR(255),
   description TEXT
 );
 
@@ -58,19 +58,19 @@ insert into products (name, description, recommended_minimum_age_id, rating_id, 
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('film 6', '...', 5, 10, '492662523-7', 14);
 
 
-/* #1 */ insert into genres (name, description) values ('action', 'boom boom pow pow'); 
-/* #2 */ insert into genres (name, description) values ('comedy', 'ksu ksu ksu');
-/* #3 */ insert into genres (name, description) values ('documentary', 'David Attenborough');
-/* #4 */ insert into genres (name, description) values ('animated movie', 'disney etc.');
-/* #5 */ insert into genres (name, description) values ('romance', 'smooch');
-/* #6 */ insert into genres (name, description) values ('sci-fi', 'poep genre');
-/* #7 */ insert into genres (name, description) values ('horror', 'aaaagggggghhhhh');
-/* #8 */ insert into genres (name, description) values ('drama', " :'( ");
-/* #9 */ insert into genres (name, description) values ('adventure', 'monster, treasure, evil organisation that wants treasure, more treasure');
-/* #10 */ insert into genres (name, description) values ('fantasy', 'skidadle dkidoodle, your...');
-/* #11 */ insert into genres (name, description) values ('superhero', '...man, ...woman, ...boy and ...girl. Very original names');
-/* #12 */ insert into genres (name, description) values ('mystery', '?');
-/* #13 */ insert into genres (name, description) values ('history', 'yesterday, the day before yesterday, the day before the day before yesterday, ...');
+/* #1 */ insert into genres (genre, description) values ('action', 'boom boom pow pow'); 
+/* #2 */ insert into genres (genre, description) values ('comedy', 'ksu ksu ksu');
+/* #3 */ insert into genres (genre, description) values ('documentary', 'David Attenborough');
+/* #4 */ insert into genres (genre, description) values ('animated movie', 'disney etc.');
+/* #5 */ insert into genres (genre, description) values ('romance', 'smooch');
+/* #6 */ insert into genres (genre, description) values ('sci-fi', 'poep genre');
+/* #7 */ insert into genres (genre, description) values ('horror', 'aaaagggggghhhhh');
+/* #8 */ insert into genres (genre, description) values ('drama', " :'( ");
+/* #9 */ insert into genres (genre, description) values ('adventure', 'monster, treasure, evil organisation that wants treasure, more treasure');
+/* #10 */ insert into genres (genre, description) values ('fantasy', 'skidadle dkidoodle, your...');
+/* #11 */ insert into genres (genre, description) values ('superhero', '...man, ...woman, ...boy and ...girl. Very original names');
+/* #12 */ insert into genres (genre, description) values ('mystery', '?');
+/* #13 */ insert into genres (genre, description) values ('history', 'yesterday, the day before yesterday, the day before the day before yesterday, ...');
 
 insert into ratings (rating) values ('1/10 penguins');
 insert into ratings (rating) values ('2/10 penguins');

@@ -29,6 +29,8 @@ app.get('/api/echo', echoRequest)
 app.get('/api/categories', getCategories)
 app.get('/api/products', getProducts)
 app.get('/api/products/:id', getProductById)
+app.get('/api/productgenres', getProductGenres)
+
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
 // app.post('/api/products', createProduct)
@@ -73,15 +75,11 @@ function getProducts(request, response) {
     const sqlOpdracht = db.prepare(`SELECT * FROM products  WHERE category_id = ? ORDER BY id ASC`)
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare(//`SELECT * FROM product_genres
-                                   // JOIN genres ON product_genres.genre_id = genres.id
-                                   // ORDER BY id ASC`,
-                                   `SELECT * FROM products
+    const sqlOpdracht = db.prepare(`SELECT * FROM products
                                     JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = recommended_minimum_ages.id
-                                    JOIN ratings ON products.rating_id = ratings.id 
-                                                                  
+                                    JOIN ratings ON products.rating_id = ratings.id                          
                                     ORDER BY id ASC`
-                                   ) //  JOIN product_genres ON products.id = product_genres.product_id  (in de lege regel)
+                                   )  
     
     data = sqlOpdracht.all()
   }
@@ -99,6 +97,34 @@ function getProductById(request, response) {
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }
+
+function getProductGenres(request, response) {
+  console.log('API ontvangt /api/productgenres/?', request.query)
+
+  const category_id = parseInt(request.query.category)
+  let data = []
+  if (category_id > 0) {
+    const sqlOpdracht = db.prepare(`SELECT * FROM product_genres  WHERE category_id = ? ORDER BY id ASC`)
+    data = sqlOpdracht.all(category_id)
+  } else {
+    const sqlOpdracht = db.prepare(`SELECT * FROM product_genres
+                                    JOIN genres ON product_genres.genre_id = genres.id
+                                    ORDER BY id ASC`
+                                   )  
+    
+    data = sqlOpdracht.all()
+  }
+  // console.log(JSON.stringify(data, null, 2))
+  response.status(200).send(data)
+  console.log('API verstuurt /api/productgenres/')
+
+  
+}
+
+
+
+
+
 
 /*
 const getRelatedProductsById = (request, response) => {

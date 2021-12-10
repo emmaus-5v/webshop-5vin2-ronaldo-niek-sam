@@ -42,7 +42,7 @@
 			<a
 				href="basket.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Winkelwagen <span class="num_products"></span></button></a>
 		</div>
-	</nav>
+	</nav> 
 
   <!-- lijst met producten, wordt gevuld door javascript -->
 	<main id="index">
@@ -119,7 +119,7 @@
             var data = JSON.parse(this.response) // vertaal response van API naar array met producten
             for (let row in data) { // herhaal voor elke product
               const product = data[row]
-			  //const product_genres = data[row]
+			  
               var name = product.name.substr(0, 35)
               if(name.length < product.name.length) {
                 name = name + '...'
@@ -130,7 +130,7 @@
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
 			  clone.querySelector(".recommended_minimum_age").textContent = ` ${product.recommended_minimum_age}`
-			  clone.querySelector(".product_genre").textContent = ` ${product.genre}`
+			  clone.querySelector(".product_genre").textContent = ` ${product.name}`
 			  clone.querySelector(".product_rating").textContent = ` ${product.rating}`
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = ` ${product.code}`

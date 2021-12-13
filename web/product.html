@@ -51,10 +51,11 @@
           <div class="card-body">
             <p class="product_description card-text"></p>
             <ul class="product-properties">
-              <li><span class="propert-name">Age Restriction:</span><span class="product_age_restriction"></span></li>
-              <li><span class="propert-name">Genre:</span><span class="product_genre"></span></li>
-              <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
-              <li><span class="propert-name">Code:</span><span class="product_code"></span></li>
+              <li><span class="propert-name">Recommended minimum age:</span><span class="recommended_minimum_age"></span></li>
+					    <li><span class="propert-name">Genres:</span><span class="product_genre"></span></li>
+						  <li><span class="propert-name">Rating:</span><span class="product_rating"></span></li>
+						  <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
+						  <li><span class="propert-name">Code:</span><span class="product_code"></span></li>
             </ul>
             <input class="product_amount" type="number" value="1" min="1">
             <input class="product_id" type="hidden" name="id" data-json="">
@@ -86,15 +87,15 @@
             if (request.status >= 200 && request.status < 400) {
                 const clone = template.content.cloneNode(true);
                 clone.querySelector(".product_title").textContent = product.name
-                clone.querySelector(".product_description").textContent = `${product.description.substr(0, 100)}...`
-                clone.querySelector(".product_age_restriction").textContent = ` ${product.age_restriction}`
-                clone.querySelector(".product_genre").textContent = ` ${product.genre}`
+                clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
+			          clone.querySelector(".recommended_minimum_age").textContent = ` ${product.recommended_minimum_age}`
+			          clone.querySelector(".product_genre").textContent = ` ${product.name}`
+			          clone.querySelector(".product_rating").textContent = ` ${product.rating}`
                 clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
                 clone.querySelector(".product_code").textContent = ` ${product.code}`
                 clone.querySelector(".product_id").value = product.id
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
                 clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
-
                 container.appendChild(clone)
             } else {
               const errorMessage = document.createElement('marquee')

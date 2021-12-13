@@ -96,6 +96,7 @@ function getProductById(request, response) {
   const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
+  
 }
 
 function getProductGenres(request, response) {

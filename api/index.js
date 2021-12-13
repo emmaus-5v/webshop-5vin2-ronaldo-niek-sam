@@ -101,19 +101,17 @@ function getProductById(request, response) {
 function getProductGenres(request, response) {
   console.log('API ontvangt /api/productgenres/?', request.query)
 
-  const category_id = parseInt(request.query.category)
+  const product_id = parseInt(request.query.product_id)
   let data = []
-  if (category_id > 0) {
-    const sqlOpdracht = db.prepare(`SELECT * FROM product_genres  WHERE category_id = ? ORDER BY id ASC`)
-    data = sqlOpdracht.all(category_id)
-  } else {
+  if (product_id > 0) {
     const sqlOpdracht = db.prepare(`SELECT * FROM product_genres
                                     JOIN genres ON product_genres.genre_id = genres.id
+                                    WHERE product_id = ?
                                     ORDER BY id ASC`
-                                   )  
-    
-    data = sqlOpdracht.all()
-  }
+   )
+    data = sqlOpdracht.all(product_id)
+  } 
+  
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
   console.log('API verstuurt /api/productgenres/')

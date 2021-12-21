@@ -53,7 +53,6 @@ CREATE TABLE ratings (
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Lord of the Drinks', '...', 1, 9, '816905633-0', 10.5);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Tinytanic', '...', 7, 6, '077030122-3', 11);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Soy Story 3', '...', 4, 8, '445924201-X', 13.5);
-insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Jurassic Shark', '...', 6, 12, '693155505-7', 13.5);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Black Pfanzer', '...', 2, 2, '686928463-6', 14);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('The Goatfather', '...', 6, 10, '492662523-7', 14);
 insert into products (name, description, recommended_minimum_age_id, rating_id, code, price) values ('Bar Wars', '...', 7, 10, '194695103-C', 13.5);

@@ -72,13 +72,13 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare(`SELECT * FROM products  WHERE category_id = ? ORDER BY id ASC`)
+    const sqlOpdracht = db.prepare(`SELECT * FROM products  WHERE category_id = ? ORDER BY name ASC`)
     data = sqlOpdracht.all(category_id)
   } else {
     const sqlOpdracht = db.prepare(`SELECT * FROM products
                                     JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = recommended_minimum_ages.id
                                     JOIN ratings ON products.rating_id = ratings.id                          
-                                    ORDER BY id ASC`
+                                    ORDER BY name ASC`
                                    )  
     
     data = sqlOpdracht.all()

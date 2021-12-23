@@ -93,7 +93,11 @@ function getProductById(request, response) {
 
   let data = []
   const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
+  const sqlOpdracht = db.prepare(`SELECT * FROM products
+                                  JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = recommended_minimum_ages.id
+                                  JOIN ratings ON products.rating_id = ratings.id
+                                  WHERE products.id = ?`
+                                  )
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
   

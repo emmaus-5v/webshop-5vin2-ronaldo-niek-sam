@@ -72,13 +72,18 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare(`SELECT * FROM products  WHERE category_id = ? ORDER BY name ASC`)
+    const sqlOpdracht = db.prepare(`SELECT *, recommended_minimum_ages.id as RecMinAges_id, ratings.id as ratings_id FROM products 
+                                    JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = RecMinAges_id
+                                    JOIN ratings ON products.rating_id = ratings_id   
+                                    WHERE category_id = ? 
+                                    ORDER BY products.id DESC`
+                                    )
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare(`SELECT * FROM products
-                                    JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = recommended_minimum_ages.id
-                                    JOIN ratings ON products.rating_id = ratings.id                          
-                                    ORDER BY name ASC`
+    const sqlOpdracht = db.prepare(`SELECT *, recommended_minimum_ages.id as RecMinAges_id, ratings.id as ratings_id FROM products
+                                    JOIN recommended_minimum_ages ON products.recommended_minimum_age_id = RecMinAges_id
+                                    JOIN ratings ON products.rating_id = ratings_id                        
+                                    ORDER BY products.id DESC`
                                    )  
     
     data = sqlOpdracht.all()
@@ -102,12 +107,12 @@ function getProductById(request, response) {
 function getProductGenres(request, response) {
   console.log('API ontvangt /api/productgenres/?', request.query)
 
-  const product_id = parseInt(request.query.product_id)
+  const product_id = parseInt(request.query.product_id)  
   let data = []
   if (product_id > 0) {
     const sqlOpdracht = db.prepare(`SELECT * FROM product_genres
                                     JOIN genres ON product_genres.genre_id = genres.id
-                                    WHERE product_id = ?
+                                    WHERE products.id = ?
                                     ORDER BY id ASC`
    )
     data = sqlOpdracht.all(product_id)

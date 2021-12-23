@@ -62,7 +62,7 @@
 					<p class="product_description card-text"></p>
 					<ul class="product-properties">
 						<li><span class="propert-name">Recommended minimum age:</span><span class="recommended_minimum_age"></span></li>
-					    <li><span class="propert-name">Genres:</span><span class="product_genre"></span></li>
+					    <li><span class="propert-name">Film studio:</span><span class="product_studio"></span></li>
 						<li><span class="propert-name">Rating:</span><span class="product_rating"></span></li>
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
@@ -130,7 +130,7 @@
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 200)}...`
 			  clone.querySelector(".recommended_minimum_age").textContent = ` ${product.recommended_minimum_age}`
-			  clone.querySelector(".product_genre").textContent = ` ${product.name}`
+			  clone.querySelector(".product_studio").textContent = ` ${product.studio}`
 			  clone.querySelector(".product_rating").textContent = ` ${product.rating}`
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = ` ${product.code}`

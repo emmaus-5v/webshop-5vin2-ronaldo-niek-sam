@@ -109,9 +109,10 @@ function getProductGenres(request, response) {
   const product_id = parseInt(request.query.product_id)
   let data = []
   if (product_id > 0) {
-    const sqlOpdracht = db.prepare(`SELECT * FROM product_genres
+    const sqlOpdracht = db.prepare(`SELECT genre FROM product_genres
                                     JOIN genres ON product_genres.genre_id = genres.id
-                                    WHERE product_id = ?
+                                    JOIN products ON product_genres.product_id = products.id
+                                    WHERE products.id = ?
                                     ORDER BY id ASC`
    )
     data = sqlOpdracht.all(product_id)

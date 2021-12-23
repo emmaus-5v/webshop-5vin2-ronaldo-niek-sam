@@ -87,7 +87,7 @@
             if (request.status >= 200 && request.status < 400) {
               const clone = template.content.cloneNode(true);
                 clone.querySelector(".product_title").textContent = product.name
-                clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
+                clone.querySelector(".product_description").textContent =`${product.description.substr(0, 20000)}...`
 			          clone.querySelector(".recommended_minimum_age").textContent = ` ${product.recommended_minimum_age}`
 			          clone.querySelector(".product_genre").textContent = ` ${product.name}`
 			          clone.querySelector(".product_rating").textContent = ` ${product.rating}`

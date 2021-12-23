@@ -10,11 +10,10 @@ body {
 }
 
 .toast {
-    /* dirty: below 'card' button  */
     position: fixed; 
     top: 50px; 
     right: 0; 
-    z-index:0;
+    z-index:1;
 }
 
 .shop-button {
@@ -28,7 +27,7 @@ body {
 
 .card {
   width:250px; 
-  height:900  px; 
+  height:900px; 
   margin-bottom: 20px
 }
 
@@ -51,6 +50,7 @@ body {
 .product img {
   margin: auto;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .product > .card-header {

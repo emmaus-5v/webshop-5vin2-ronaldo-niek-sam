@@ -95,7 +95,7 @@
                 clone.querySelector(".product_code").textContent = ` ${product.code}`
                 clone.querySelector(".product_id").value = product.id
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
-                clone.querySelector(".product_image").src =`/images/${product.id}.JPEG`
+                clone.querySelector(".product_image").src =`/images/${productId}.JPEG`
                 container.appendChild(clone)
             } else {
               const errorMessage = document.createElement('marquee')

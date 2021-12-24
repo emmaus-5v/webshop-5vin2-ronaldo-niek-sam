@@ -6,7 +6,22 @@ footer {
 } 
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom left, rgb(212, 162, 69), rgb(6, 116, 101));
+}
+
+.navbar {
+  background-image: linear-gradient(to left, rgb(212, 162, 69), rgb(114,138,89));
+}
+
+.basket-button {
+  color: rgb(39, 111, 245);
+  border-color: rgb(39, 111, 245) ;
+}
+
+.basket-button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(39, 111, 245);
+  border-color: rgb(39, 111, 245) ;
 }
 
 .toast {
@@ -26,9 +41,11 @@ body {
 }
 
 .card {
+  background-image: linear-gradient(to bottom left, rgba(0, 121, 121, 1), rgba(31, 110, 110, 0.4));
   width:250px; 
-  height:900px; 
-  margin-bottom: 20px
+  height:920px; 
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .card-header {
@@ -78,3 +95,6 @@ body {
   float: left;
 }
 
+.form-control {
+  background-color: rgba(128, 235, 235, 0.5);
+}
